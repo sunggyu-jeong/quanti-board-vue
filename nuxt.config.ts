@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/eslint-module', '@nuxt/eslint'],
+  eslint: {
+    lintOnStart: true,
+    fix: true,
+  },
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css'
+  }
 })
