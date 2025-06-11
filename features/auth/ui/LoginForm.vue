@@ -1,11 +1,30 @@
 <template>
-  <div class="flex flex-col items-center w-[448px] h-[614px] stroke-1 bg-white rounded-ms shadow-lg">
-    <img src="../../../shared/asset/logo.png" alt="logo" class="bg-black h-10 mt-7" >
-    <p class="font-bold text-2xl leading-8 tracking-[-0.6px] mt-6">환영합니다</p>
-    <p class="font-normal text-[14px] leading-5 text-[#71717A] mt-[3.5px]">계정에 로그인하거나 새 계정을 만드세요</p>
+  <div class="flex flex-col space-y-3 mb-6">
+    <base-input name="이메일" placeholder="your@email.com" />
+    <base-input name="비밀번호" type="password" placeholder="패스워드를 입력해주세요." />
+    <div class="flex flex-row justify-between mt-3">
+      <base-check label="로그인 상태 유지" />
+      <button>
+        <span class="text-blue-600 text-[12px] font-medium">비밀번호 찾기</span>
+      </button>
+    </div>
+    <base-button :buttons="buttons" @click="$emit('login')" />
   </div>
 </template>
 
 <script setup lang="ts">
+import type { ButtonItem } from '@/shared/ui/BaseButton.vue'
+
+const buttons: ButtonItem[] = [
+  {
+    label: '로그인',
+    colorClasses: 'bg-black text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500'
+  },
+    {
+    label: '구글로 로그인 하기',
+    colorClasses: 'bg-white text-black hover:bg-blue-700 focus:ring-2 focus:ring-blue-500'
+  }
+];
+
 
 </script>
