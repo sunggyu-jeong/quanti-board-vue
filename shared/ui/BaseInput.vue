@@ -21,10 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Eye, EyeOff } from 'lucide-vue-next';
-
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   name: string;
   type?: string;
   placeholder: string;

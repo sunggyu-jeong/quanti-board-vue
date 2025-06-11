@@ -14,16 +14,13 @@
     </div>
 </template>
 <script setup lang="ts">
-import { useUiStore } from '../../stores/ui';
 
 const currentTab = ref<string>('login');
 
-const props = defineProps<{
+defineProps<{
   tabs: { id: string; label: string }[];
 }>();
 const emits = defineEmits(['tabSelected']);
-
-const uiStore = useUiStore();
 
 function selectTab(tabId: string) {
   emits('tabSelected', tabId);

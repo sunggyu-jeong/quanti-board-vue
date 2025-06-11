@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonItem } from '@/shared/ui/BaseButton.vue'
+import type { ButtonItem } from '../../../shared/ui/BaseButton.vue'
 
 const buttons: ButtonItem[] = [
   {

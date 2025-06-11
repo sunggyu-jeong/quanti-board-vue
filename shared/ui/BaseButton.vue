@@ -29,16 +29,10 @@ export interface ButtonItem {
   colorClasses: string;
 }
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   buttons: ButtonItem[];
   type?: string;
 }>(), {
   type: 'button'
 });
-
-const { buttons, type } = props;
-
-const emit = defineEmits<{
-  (e: 'click', index: number): void;
-}>();
 </script>
