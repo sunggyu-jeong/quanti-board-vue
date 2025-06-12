@@ -8,23 +8,35 @@
         <span class="text-blue-600 text-[12px] font-medium">비밀번호 찾기</span>
       </button>
     </div>
-    <base-button :buttons="buttons" @click="$emit('login')" />
+    <base-button :buttons="buttons" @click="onSelectButton" />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { ButtonItem } from '../../../shared/ui/BaseButton.vue'
+import type { ButtonItem } from '../../../shared/ui/BaseButton.vue';
 
 const buttons: ButtonItem[] = [
   {
     label: '로그인',
-    colorClasses: 'bg-black text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500'
+    colorClasses: 'bg-black text-white hover:bg-gray-700 focus:ring-2 focus:ring-gray-900',
+    identifier: 'login'
   },
     {
     label: '구글로 로그인 하기',
-    colorClasses: 'bg-white text-black hover:bg-blue-700 focus:ring-2 focus:ring-blue-500'
+      colorClasses: 'bg-white text-black hover:ring-gray-500 focus:ring-2 focus:ring-gray-100',
+    identifier: 'google'
   }
 ];
+
+function onSelectButton(identifier: string) { 
+  console.log(">>>")
+  if (identifier === "login") { 
+    alert('로그인 테스트');
+  } else if (identifier === "google") { 
+    // Handle Google login
+    alert('구글로 로그인하기는 아직 구현되지 않았습니다.');
+  }
+}
 
 
 </script>

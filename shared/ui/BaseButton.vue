@@ -7,7 +7,7 @@
           'w-full h-10 font-medium rounded-md transition duration-200 border border-gray-300',
           btn.colorClasses
         ]"
-        @click="$emit('click', idx)"
+        @click="$emit('buttonClick', idx)"
       >
         {{ btn.label }}
       </button>
@@ -27,6 +27,7 @@
 export interface ButtonItem {
   label: string;
   colorClasses: string;
+  identifier: string;
 }
 
 withDefaults(defineProps<{
