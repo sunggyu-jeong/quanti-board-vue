@@ -4,7 +4,7 @@
       type="checkbox"
       :checked="modelValue"
       class="form-checkbox"
-      @change="$emit('update:modelValue', $event.target.checked)"
+      @change="$emit('update:modelValue', ($event.target as HTMLInputElement)?.checked)"
     >
     <span class="ml-2 font-medium text-[12px]">
       {{ label }}

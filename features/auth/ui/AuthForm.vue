@@ -12,9 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import LoginForm from './LoginForm.vue';
-import SignupForm from './SignupForm.vue';
-import Tabs from '../../shared/ui/Tabs.vue';
 
 type Tab = { id: string; label: string };
 

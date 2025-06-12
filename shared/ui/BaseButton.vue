@@ -31,7 +31,7 @@ export interface ButtonItem {
 
 withDefaults(defineProps<{
   buttons: ButtonItem[];
-  type?: string;
+  type?: 'button' | 'reset' | 'submit';
 }>(), {
   type: 'button'
 });
