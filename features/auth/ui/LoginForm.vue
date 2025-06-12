@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonItem } from '../../../shared/ui/BaseButton.vue';
+import type { ButtonItem } from '@/shared/ui/BaseButton.vue';
 
 const buttons: ButtonItem[] = [
   {
@@ -37,6 +37,5 @@ function onSelectButton(identifier: string) {
     alert('구글로 로그인하기는 아직 구현되지 않았습니다.');
   }
 }
-
 
 </script>

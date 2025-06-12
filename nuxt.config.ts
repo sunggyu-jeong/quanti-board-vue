@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css'
   },
   components: [
-    { path: '~/shared/ui', global: true }
+    { path: '~/shared/ui', global: true },
+    { path: '~/features', global: true, pathPrefix: false }
   ]
 })

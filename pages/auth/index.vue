@@ -6,16 +6,14 @@
       <p class="font-normal text-[14px] leading-5 text-[#71717A] mt-[3.5px]">계정에 로그인하거나 새 계정을 만드세요</p>
       <base-tabs :tabs="tabs" @tab-selected="onTabSelected" />
       <div class="w-full px-5 mt-6">
-        <LoginForm v-if="currentTab === 'login'" />
-        <SignupForm v-else />
+        <login-form v-if="currentTab === 'login'" />
+        <signup-form v-else />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import LoginForm from '@/features/auth/ui/LoginForm.vue';
-import SignupForm from '@/features/auth/ui/SignupForm.vue';
 
 import { useCookie } from '#app';
 import { useRouter } from 'vue-router';
