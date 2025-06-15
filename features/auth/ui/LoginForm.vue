@@ -33,7 +33,6 @@ function onSelectButton(identifier: string) {
   if (identifier === "login") { 
     alert('로그인 테스트');
   } else if (identifier === "google") { 
-    // Handle Google login
     alert('구글로 로그인하기는 아직 구현되지 않았습니다.');
   }
 }
